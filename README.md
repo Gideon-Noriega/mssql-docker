@@ -1,30 +1,24 @@
-# MSSQL Developer Database with Docker
+# Microsoft SQL Server Docker Setup
+
+Local MS SQL Server instance using Docker for development and testing.
 
 ## Quick Start
 
-1. Start the database:
-   ```bash
-   docker-compose up -d
-   ```
-
-2. Connect to the database:
-   - **Host:** localhost
-   - **Port:** 1433
-   - **Username:** sa
-   - **Password:** YourStrong@Passw0rd
-
-3. Stop the database:
-   ```bash
-   docker-compose down
-   ```
-
-## Configuration
-
-- **Edition:** Developer (free for development)
-- **Data persistence:** Enabled via Docker volume
-- **Default password:** Change in `.env` file
-
-## Connection String Example
+```bash
+docker-compose up -d
 ```
-Server=localhost,1433;Database=master;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=true;
+
+## Connection
+
 ```
+Host: localhost
+Port: 1433
+User: sa
+Password: (set in docker-compose.yml)
+```
+
+## Use Cases
+
+- Local development against SQL Server
+- Data engineering pipeline testing
+- Cross-database migration testing
